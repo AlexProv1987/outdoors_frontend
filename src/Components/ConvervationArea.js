@@ -1,6 +1,4 @@
 import { Container } from "react-bootstrap";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from "react-bootstrap/DropdownButton";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
