@@ -9,6 +9,8 @@ html,body{
 }
 .card-row{
   padding-top: 70px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 /**/
 /*SEARCHBAR CSS START*/
@@ -37,3 +39,8 @@ html,body{
   padding-bottom: 30px;
 }
 /*CARDS CSS END*/
+/*FOOTER CSS START*/
+.footer-container{
+  padding-top: 70px;
+}
+/*FOOTER CSS END*/
