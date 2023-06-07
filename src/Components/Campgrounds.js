@@ -21,9 +21,10 @@ const ConvervationArea = () => {
     };
 
     return (
-        <Container className="pt-4 border border-dark">
+        <Container className="pt-4 border border-dark rounded">
             <Row className="justify-content-center text-center">
                 <Col><p>Campgrounds</p></Col>
+                <hr/>
             </Row>
             <Row className="text-center">
                 <Col>

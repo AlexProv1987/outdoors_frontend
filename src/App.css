@@ -28,6 +28,10 @@ html,body{
   font-size: 75px;
   font-family: Verdana, sans-serif;
 }
+.title-header img{
+  width:10%;
+  height:10%;
+}
 /*HEADER CSS END*/
 /*CARDS CSS START*/
 .find-btn{

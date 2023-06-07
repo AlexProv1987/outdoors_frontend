@@ -21,9 +21,10 @@ const ConvervationArea = () => {
     };
 
     return (
-        <Container className="pt-4 border border-dark">
+        <Container className="pt-4 border border-dark rounded">
             <Row className="text-center">
                 <Col><p>Conservation Pages</p></Col>
+                <hr/>
             </Row>
             <Row className="d-flex justify-content-center">
                 <Col md={4} sm={6} xs={6}>
