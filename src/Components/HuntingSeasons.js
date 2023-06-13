@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { useState } from "react";
+import { stateCounty } from "../Data/state_county";
 const ConvervationArea = () => {
     const [state, setState] = useState('')
     const [county, setCounty] = useState('')
@@ -27,12 +28,12 @@ const ConvervationArea = () => {
                 <hr/>
             </Row>
             <Row className="d-flex justify-content-center">
-                <Col md={4} sm={6} xs={6}>
+                <Col md={6} sm={6} xs={6}>
                     <select value={state} onChange={HandleSelect} name='state' required className="form-control form-select text-center" id="inlineFormCustomSelect">
                         <option value="" disabled selected hidden={true}>State</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="California">California</option>
+                        {Object.keys(stateCounty).map(key=>
+                        <option value={key}>{key}</option>
+                            )}
                     </select>
                 </Col>
             </Row>

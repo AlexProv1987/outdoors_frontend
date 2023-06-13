@@ -2,15 +2,17 @@ import { Container } from "react-bootstrap";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import { stateCounty } from "../Data/state_county";
 import { useState } from "react";
 const ConvervationArea = () => {
     const [state, setState] = useState('')
     const [county, setCounty] = useState('')
-
+    const [counties, setCounties] = useState([])
     const HandleSelect = (event) => {
         switch(event.target.name){
             case 'state':
                 setState(event.target.value);
+                setCounties(stateCounty[event.target.value]);
                 return;
             case 'county':
                 setCounty(event.target.value);
@@ -30,17 +32,15 @@ const ConvervationArea = () => {
                 <Col>
                     <select value={state} onChange={HandleSelect} name='state' required className="form-control form-select text-center" id="inlineFormCustomSelect">
                         <option value="" disabled selected hidden={true}>State</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="California">California</option>
+                        {Object.keys(stateCounty).map(key=>
+                        <option value={key}>{key}</option>
+                            )}
                     </select>
                 </Col>
                 <Col>
                     <select value={county} onChange={HandleSelect} name='county' required className="form-control form-select text-center" id="inlineFormCustomSelect">
-                        <option value="" disabled selected hidden={true}>County</option>
-                        <option value="County1">County1</option>
-                        <option value="County2">County2</option>
-                        <option value="County3">County3</option>
+                    <option value="" disabled selected hidden={true}>Counties</option>
+                        {counties.length > 0 ? counties.map(sCounty => <option value={sCounty}>{sCounty}</option>) :  <option value="" disabled >No State Selected</option>}
                     </select>
                 </Col>
             </Row>

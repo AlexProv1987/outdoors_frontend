@@ -27,7 +27,14 @@ const SearchBar = () => {
           >
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">Recipes</Nav.Link>
+            <Nav.Link href="#action2">Shows</Nav.Link>
             <Nav.Link href="#">Podcast</Nav.Link>
+            <NavDropdown title="Recommended" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Hunting</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">Camping</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">Conservation</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">All Recommended</NavDropdown.Item>
+            </NavDropdown>
             <NavDropdown title="Merch" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Women</NavDropdown.Item>
               <NavDropdown.Item href="#action4">Mens</NavDropdown.Item>
